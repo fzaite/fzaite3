@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fzaite3/profile.dart';
 import 'menu.dart';
-import 'profile.dart';
 import 'main.dart';
+import 'profile.dart';
 
 void main() => runApp(const Food());
 
@@ -14,7 +15,7 @@ class Food extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/menu': (BuildContext context) => const Menupage(),
-        '/profile': (BuildContext context) => const Profile(),
+        '/card': (BuildContext context) => const Profile(),
         '/home': (BuildContext context) => const MyApp()
       },
       home: const MyHomePage(),
@@ -86,11 +87,11 @@ class _MyHomePageState extends State<MyHomePage>
           color: Colors.white,
           iconSize: 35,
           onPressed: () {
-            Navigator.of(context).pushNamed('/profile');
+            Navigator.of(context).pushNamed('/card');
           },
         ),
         title: const Center(
-            child: Text('Our Resurant',
+            child: Text('Resurant',
                 style: TextStyle(
                     fontFamily: 'Montserrat',
                     fontSize: 33,

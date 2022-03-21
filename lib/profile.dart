@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'food.dart';
+import 'main.dart';
 
 void main() => runApp(const Profile());
 
@@ -11,7 +12,8 @@ class Profile extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/food': (BuildContext context) => const Food()
+        '/food': (BuildContext context) => const Food(),
+        '/home': (BuildContext context) => const MyApp()
       },
       home: const MyHomePage(),
     );
@@ -84,11 +86,15 @@ class _MyHomePageState extends State<MyHomePage>
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
                           color: Colors.white))),
-              actions: const <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(right: 8.0),
-                  child: Icon(Icons.menu, size: 40.0),
-                )
+              actions: <Widget>[
+                IconButton(
+                  icon: const Icon(Icons.home),
+                  color: Colors.white,
+                  iconSize: 35,
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/home');
+                  },
+                ),
               ],
             ),
             body: Column(
