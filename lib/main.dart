@@ -6,6 +6,7 @@ import 'request.dart';
 import 'personal.dart';
 import 'login.dart';
 import 'foodrec.dart';
+import 'cake.dart';
 
 void main() => runApp(const MyApp());
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/profile': (BuildContext context) => const Profilee(),
         '/sgin': (BuildContext context) => const Login(),
         '/fo': (BuildContext context) => const Fo(),
+        '/cake': (BuildContext context) => const Cake(),
       },
       home: const MyHomePage(),
     );
@@ -49,10 +51,18 @@ class _MyHomePageState extends State<MyHomePage>
           title: const Center(
               child: Text('HOME PAGE',
                   style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white))),
+                    fontFamily: 'Montserrat',
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    shadows: [
+                      Shadow(
+                        blurRadius: 7.0,
+                        color: Colors.black,
+                        offset: Offset(3.0, 3.0),
+                      ),
+                    ],
+                  ))),
         ),
         body: Column(mainAxisAlignment: MainAxisAlignment.center, children: <
             Widget>[
@@ -282,7 +292,7 @@ class _MyHomePageState extends State<MyHomePage>
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed('/travel');
+                Navigator.of(context).pushNamed('/cake');
               },
               child: Container(
                 height: 60.0,
@@ -303,7 +313,7 @@ class _MyHomePageState extends State<MyHomePage>
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
                     alignment: Alignment.center,
                     child: const Text(
-                      "Traveling",
+                      "Cakes Catalog",
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),

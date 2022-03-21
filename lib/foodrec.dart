@@ -65,10 +65,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Center(
             child: Text('Food Recipes',
                 style: TextStyle(
-                    fontFamily: 'Montserrat',
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white))),
+                  fontFamily: 'Montserrat',
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 10.0,
+                      color: Colors.black,
+                      offset: Offset(3.0, 3.0),
+                    ),
+                  ],
+                ))),
         actions: <Widget>[
           Padding(
               padding: const EdgeInsets.only(right: 8.0),
@@ -92,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     padding: const EdgeInsets.fromLTRB(15.0, 35.0, 15.0, 10.0),
                     child: Material(
-                      elevation: 10.0,
+                      elevation: 0.0,
                       borderRadius: BorderRadius.circular(25.0),
                       child: TextFormField(
                         decoration: const InputDecoration(
@@ -194,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           image: AssetImage('assets/images/breakfast.jpg'),
                           fit: BoxFit.cover)),
                   child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
+                    filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
                     child: Container(
                       decoration:
                           BoxDecoration(color: Colors.white.withOpacity(0.0)),
@@ -203,29 +211,45 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Container(
-                  padding: const EdgeInsets.only(top: 150.0, left: 60.0),
+                  padding: const EdgeInsets.only(top: 180.0, left: 40.0),
                   child: Column(
                     children: <Widget>[
                       const Text(
-                        'BEST OF',
+                        'BEST OF ',
                         style: TextStyle(
-                            fontFamily: 'Timesroman',
-                            fontSize: 25.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
+                          fontFamily: 'Timesroman',
+                          fontSize: 25.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 7.0,
+                              color: Colors.black,
+                              offset: Offset(3.0, 3.0),
+                            ),
+                          ],
+                        ),
                       ),
                       const Text(
                         'THE DAY',
                         style: TextStyle(
-                            fontFamily: 'Timesroman',
-                            fontSize: 25.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
+                          fontFamily: 'Timesroman',
+                          fontSize: 25.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 7.0,
+                              color: Colors.black,
+                              offset: Offset(3.0, 3.0),
+                            ),
+                          ],
+                        ),
                       ),
-                      const SizedBox(height: 10.0),
+                      const SizedBox(height: 5.0),
                       Container(
-                        height: 3.0,
-                        width: 50.0,
+                        height: 4.0,
+                        width: 90.0,
                         color: Colors.orange,
                       )
                     ],
