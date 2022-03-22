@@ -73,17 +73,30 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #    - family: PlayfairDisplay
-  #      fonts:
-  #        - asset: fonts/PlayfairDisplay-Regular.ttf
-  # #       - asset: fonts/Schyler-Italic.ttf
-  # #         style: italic
-  #    - family: Montserrat
-  #      fonts:
-  #        - asset: fonts/Montserrat-Regular.ttf
-  # #       - asset: fonts/TrajanPro_Bold.ttf
-  # #         weight: 700
+  fonts:
+     - family: PlayfairDisplay
+       fonts:
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
+          style: italic
+
+     - family: Montserrat
+       fonts:
+         - asset: assets/fonts/Montserrat-Regular.ttf
+
+     - family: Quicksand
+       fonts:
+         - asset: assets/fonts/Quicksand-Regular.ttf
+         - asset: assets/fonts/Quicksand-Bold.ttf
+         - asset: assets/fonts/Quicksand-Light.ttf
+         - asset: assets/fonts/Quicksand-Medium.ttf
+
+     - family: Fredoka
+       fonts:
+         - asset: assets/fonts/Fredoka-Bold.ttf
+         - asset: assets/fonts/Fredoka-Light.ttf
+         - asset: assets/fonts/Fredoka-Medium.ttf
+         - asset: assets/fonts/Fredoka-Regular.ttf
+  
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

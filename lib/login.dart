@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'home.dart';
 import 'sginup.dart';
 import 'profile.dart';
 

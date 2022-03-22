@@ -2,8 +2,6 @@
 import 'food.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const Menupage());
-
 class Menupage extends StatelessWidget {
   const Menupage({Key? key}) : super(key: key);
 

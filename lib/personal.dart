@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'home.dart';
 
 class Profilee extends StatelessWidget {
   const Profilee({Key? key}) : super(key: key);
@@ -9,7 +9,6 @@ class Profilee extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        // '/Home': (BuildContext context) => const SignupPage(),
         '/home': (BuildContext context) => const MyApp(),
       },
       home: const MyHomePage(),
@@ -40,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           ),
           title: const Center(
-              child: Text('My App',
+              child: Text('My Profile',
                   style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontSize: 26,
@@ -63,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               clipper: getClipper(),
             ),
             Positioned(
-                width: 350.0,
+                width: 390.0,
                 top: MediaQuery.of(context).size.height / 5,
                 child: Column(
                   children: <Widget>[

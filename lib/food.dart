@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fzaite3/profile.dart';
 import 'menu.dart';
-import 'main.dart';
+import 'home.dart';
 import 'profile.dart';
-
-void main() => runApp(const Food());
 
 class Food extends StatelessWidget {
   const Food({Key? key}) : super(key: key);

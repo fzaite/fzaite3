@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'home.dart';
 
 class Fo extends StatelessWidget {
   const Fo({Key? key}) : super(key: key);
@@ -202,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           image: AssetImage('assets/images/breakfast.jpg'),
                           fit: BoxFit.cover)),
                   child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
+                    filter: ImageFilter.blur(sigmaX: 0.8, sigmaY: 0.8),
                     child: Container(
                       decoration:
                           BoxDecoration(color: Colors.white.withOpacity(0.0)),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'food.dart';
-import 'main.dart';
-
-void main() => runApp(const Profile());
+import 'home.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -183,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage>
                                         '24 H/D',
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
-                                            fontSize: 20.0,
+                                            fontSize: 17.0,
                                             color: Colors.grey),
                                       ),
                                     ],

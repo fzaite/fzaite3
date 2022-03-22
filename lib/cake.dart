@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'home.dart';
 
 class Cake extends StatelessWidget {
   const Cake({Key? key}) : super(key: key);
@@ -287,7 +287,7 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  height: 125.0,
+                  height: 115.0,
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(10.0),
@@ -302,6 +302,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: const TextStyle(
                       fontFamily: 'Quicksand',
                       fontSize: 15.0,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
@@ -310,9 +311,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     origin,
                     style: const TextStyle(
-                        fontFamily: 'Quicksand',
-                        fontSize: 12.0,
-                        color: Colors.grey),
+                      fontFamily: 'Quicksand',
+                      fontSize: 13.0,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 3.0),
