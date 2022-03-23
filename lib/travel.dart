@@ -28,6 +28,7 @@ class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
+  // ignore: prefer_typing_uninitialized_variables
   var tripDetails;
 
   @override

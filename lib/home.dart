@@ -8,6 +8,9 @@ import 'login.dart';
 import 'foodrec.dart';
 import 'cake.dart';
 import 'furniture.dart';
+import 'stats.dart';
+import 'productdescription.dart';
+import 'shopping.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -26,6 +29,10 @@ class MyApp extends StatelessWidget {
         '/fo': (BuildContext context) => const Fo(),
         '/cake': (BuildContext context) => const Cake(),
         '/furniture': (BuildContext context) => const Furniture(),
+        '/stats': (BuildContext context) => const Stats(),
+        '/Product_Description': (BuildContext context) =>
+            const ProductDescription(),
+        '/shopping': (BuildContext context) => const Shopping(),
       },
       home: const MyHomePage(),
     );
@@ -69,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  height: 130.0,
+                  height: 120.0,
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10.0),
@@ -79,12 +86,12 @@ class _MyHomePageState extends State<MyHomePage>
                           fit: BoxFit.cover)),
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(left: 13.0, top: 20.0, bottom: 22),
+                  padding: EdgeInsets.only(left: 11.0, top: 20.0, bottom: 23),
                   child: Text(
-                    'You Can Choose Any One You Want To Start It :',
+                    'You Can Choose Any Project You Want To Start It :',
                     style: TextStyle(
                       fontFamily: 'Fredoka',
-                      fontSize: 18.0,
+                      fontSize: 17.0,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF5D17AD),
@@ -447,44 +454,122 @@ class _MyHomePageState extends State<MyHomePage>
                 ),
               ),
             ),
-            // GestureDetector(
-            //   onTap: () {
-            //     Navigator.of(context).pushNamed('/travel');
-            //   },
-            //   child: Container(
-            //     height: 60.0,
-            //     margin: const EdgeInsets.all(10),
-            //     decoration: BoxDecoration(
-            //         gradient: const LinearGradient(
-            //           colors: [
-            //             Color.fromARGB(255, 47, 3, 58),
-            //             Color.fromARGB(255, 117, 34, 185)
-            //           ],
-            //           begin: Alignment.centerLeft,
-            //           end: Alignment.centerRight,
-            //         ),
-            //         borderRadius: BorderRadius.circular(15.0)),
-            //     child: Ink(
-            //       child: Container(
-            //         constraints:
-            //             const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
-            //         alignment: Alignment.center,
-            //         child: const Text(
-            //           "Traveling",
-            //           textAlign: TextAlign.center,
-            //           style: TextStyle(color: Colors.white, fontSize: 20),
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed('/stats');
+              },
+              child: Container(
+                height: 60.0,
+                margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 54, 6, 116),
+                        Color.fromARGB(255, 111, 23, 182)
+                      ],
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                    ),
+                    borderRadius: BorderRadius.circular(15.0)),
+                child: Ink(
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Stats",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ]),
-          const SizedBox(height: 43.4),
+          Row(children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed('/Product_Description');
+              },
+              child: Container(
+                height: 60.0,
+                margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 54, 6, 116),
+                        Color.fromARGB(255, 111, 23, 182)
+                      ],
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                    ),
+                    borderRadius: BorderRadius.circular(15.0)),
+                child: Ink(
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Product Description",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Fredoka',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed('/shopping');
+              },
+              child: Container(
+                height: 60.0,
+                margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 54, 6, 116),
+                        Color.fromARGB(255, 111, 23, 182)
+                      ],
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                    ),
+                    borderRadius: BorderRadius.circular(15.0)),
+                child: Ink(
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Shopping Cart",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Fredoka',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ]),
+          const SizedBox(height: 5.0),
           Container(
-            height: 50.0,
-            width: 410.5,
-            color: Colors.purple[900],
+            height: 2.0,
+            width: 370,
+            color: const Color(0xFF5D17AD),
           ),
+          // const SizedBox(height: 43.4),
+          // Container(
+          //   height: 50.0,
+          //   width: 410.5,
+          //   color: Colors.purple[900],
+          // ),
         ]));
   }
 }

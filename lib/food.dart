@@ -62,12 +62,14 @@ class _MyHomePageState extends State<MyHomePage>
     'assets/images/burger4.jpg'
   ];
 
+  // ignore: unused_element
   void _previousImage() {
     setState(() {
       photoIndex = photoIndex > 0 ? photoIndex - 1 : 0;
     });
   }
 
+  // ignore: unused_element
   void _nextImage() {
     setState(() {
       photoIndex = photoIndex < photos.length - 1 ? photoIndex + 1 : photoIndex;

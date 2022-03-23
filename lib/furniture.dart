@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'shopping.dart';
+import 'productdescription.dart';
+import 'stats.dart';
 
 class Furniture extends StatelessWidget {
   const Furniture({Key? key}) : super(key: key);
@@ -12,6 +15,10 @@ class Furniture extends StatelessWidget {
         home: const MyHomePage(),
         routes: <String, WidgetBuilder>{
           '/home': (BuildContext context) => const MyApp(),
+          '/shopping': (BuildContext context) => const Shopping(),
+          '/productdescription': (BuildContext context) =>
+              const ProductDescription(),
+          '/stats': (BuildContext context) => const Stats(),
         });
   }
 }
@@ -280,7 +287,13 @@ class _MyHomePageState extends State<MyHomePage>
                   )
                 ],
               ),
-              itemCard('FinnNavian', 'assets/images/ottoman.jpg', false),
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/productdescription');
+                },
+                child:
+                    itemCard('FinnNavian', 'assets/images/ottoman.jpg', false),
+              ),
               itemCard('FinnNavian', 'assets/images/anotherchair.jpg', false),
               itemCard('FinnNavian', 'assets/images/chair.jpg', true)
             ],
@@ -292,11 +305,22 @@ class _MyHomePageState extends State<MyHomePage>
         child: TabBar(
           controller: controller,
           indicatorColor: Colors.white,
-          tabs: const <Widget>[
-            Tab(icon: Icon(Icons.event_seat, color: Colors.white)),
-            Tab(icon: Icon(Icons.timer, color: Colors.grey)),
-            Tab(icon: Icon(Icons.shopping_cart, color: Colors.grey)),
-            Tab(icon: Icon(Icons.person_outline, color: Colors.grey))
+          tabs: <Widget>[
+            const Tab(icon: Icon(Icons.event_seat, color: Colors.white)),
+            const Tab(icon: Icon(Icons.timer, color: Colors.grey)),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed('/shopping');
+              },
+              child: const Tab(
+                  icon: Icon(Icons.shopping_cart, color: Colors.grey)),
+            ),
+            InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/stats');
+                },
+                child: const Tab(
+                    icon: Icon(Icons.person_outline, color: Colors.grey)))
           ],
         ),
       ),
