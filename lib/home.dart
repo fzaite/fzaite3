@@ -11,6 +11,7 @@ import 'furniture.dart';
 import 'stats.dart';
 import 'productdescription.dart';
 import 'shopping.dart';
+import 'cleandesigns.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/Product_Description': (BuildContext context) =>
             const ProductDescription(),
         '/shopping': (BuildContext context) => const Shopping(),
+        '/Cleandesigns': (BuildContext context) => const Cleandesigns(),
       },
       home: const MyHomePage(),
     );
@@ -54,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage>
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.purple[900],
-          elevation: 0.0,
           title: const Center(
               child: Text('HOME PAGE',
                   style: TextStyle(
@@ -70,61 +71,58 @@ class _MyHomePageState extends State<MyHomePage>
                     ],
                   ))),
         ),
-        body: Column(mainAxisAlignment: MainAxisAlignment.start, children: <
-            Widget>[
-          Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  height: 120.0,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(10.0),
-                          topRight: Radius.circular(10.0)),
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/bb1.png'),
-                          fit: BoxFit.cover)),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 11.0, top: 20.0, bottom: 23),
-                  child: Text(
-                    'You Can Choose Any Project You Want To Start It :',
-                    style: TextStyle(
-                      fontFamily: 'Fredoka',
-                      fontSize: 17.0,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF5D17AD),
-                      shadows: [
-                        Shadow(
-                          blurRadius: 10.0,
-                          color: Colors.black,
-                          offset: Offset(0.5, 0.5),
-                        ),
-                      ],
+        body: SingleChildScrollView(
+          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: <
+              Widget>[
+            Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                    height: 120.0,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                      image: AssetImage('assets/images/bb1.png'),
+                    )),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 11.0, top: 20.0, bottom: 23),
+                    child: Text(
+                      'You Can Choose Any Project You Want To Start It :',
+                      style: TextStyle(
+                        fontFamily: 'Fredoka',
+                        fontSize: 17.0,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF5D17AD),
+                        shadows: [
+                          Shadow(
+                            blurRadius: 7.0,
+                            color: Colors.black,
+                            offset: Offset(0.5, 0.5),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ]),
-          Row(children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/profile');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+                ]),
+            Row(children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/profile');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -141,25 +139,23 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/sgin');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/sgin');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -176,33 +172,31 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
+            ]),
+            const SizedBox(height: 5.0),
+            Container(
+              height: 2.0,
+              width: 370,
+              color: const Color(0xFF5D17AD),
             ),
-          ]),
-          const SizedBox(height: 5.0),
-          Container(
-            height: 2.0,
-            width: 370,
-            color: const Color(0xFF5D17AD),
-          ),
-          Row(children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/request');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+            Row(children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/request');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -219,25 +213,23 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/card');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/card');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -254,33 +246,31 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
+            ]),
+            const SizedBox(height: 5.0),
+            Container(
+              height: 2.0,
+              width: 370,
+              color: const Color(0xFF5D17AD),
             ),
-          ]),
-          const SizedBox(height: 5.0),
-          Container(
-            height: 2.0,
-            width: 370,
-            color: const Color(0xFF5D17AD),
-          ),
-          Row(children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/food');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+            Row(children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/food');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -297,25 +287,23 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/travel');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/travel');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -332,33 +320,31 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
+            ]),
+            const SizedBox(height: 5.0),
+            Container(
+              height: 2.0,
+              width: 370,
+              color: const Color(0xFF5D17AD),
             ),
-          ]),
-          const SizedBox(height: 5.0),
-          Container(
-            height: 2.0,
-            width: 370,
-            color: const Color(0xFF5D17AD),
-          ),
-          Row(children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/fo');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+            Row(children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/fo');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -375,25 +361,23 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/cake');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/cake');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -410,33 +394,31 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
+            ]),
+            const SizedBox(height: 5.0),
+            Container(
+              height: 2.0,
+              width: 370,
+              color: const Color(0xFF5D17AD),
             ),
-          ]),
-          const SizedBox(height: 5.0),
-          Container(
-            height: 2.0,
-            width: 370,
-            color: const Color(0xFF5D17AD),
-          ),
-          Row(children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/furniture');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+            Row(children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/furniture');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -453,25 +435,23 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/stats');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/stats');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -484,27 +464,31 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
+            ]),
+            const SizedBox(height: 5.0),
+            Container(
+              height: 2.0,
+              width: 370,
+              color: const Color(0xFF5D17AD),
             ),
-          ]),
-          Row(children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/Product_Description');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+            Row(children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/Product_Description');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -514,32 +498,30 @@ class _MyHomePageState extends State<MyHomePage>
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 19,
                         fontFamily: 'Fredoka',
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/shopping');
-              },
-              child: Container(
-                height: 60.0,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 54, 6, 116),
-                        Color.fromARGB(255, 111, 23, 182)
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Ink(
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/shopping');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
@@ -556,20 +538,94 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
+            ]),
+            const SizedBox(height: 5.0),
+            Container(
+              height: 2.0,
+              width: 370,
+              color: const Color(0xFF5D17AD),
+            ),
+            Row(children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/Cleandesigns');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Clean Designs",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 19,
+                        fontFamily: 'Fredoka',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.of(context).pushNamed('/shopping');
+              //   },
+              //   child: Container(
+              //     height: 60.0,
+              //     margin: const EdgeInsets.all(10),
+              //     decoration: BoxDecoration(
+              //         gradient: const LinearGradient(
+              //           colors: [
+              //             Color.fromARGB(255, 54, 6, 116),
+              //             Color.fromARGB(255, 111, 23, 182)
+              //           ],
+              //           begin: Alignment.centerLeft,
+              //           end: Alignment.centerRight,
+              //         ),
+              //         borderRadius: BorderRadius.circular(15.0)),
+              //     child: Container(
+              //       constraints:
+              //           const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+              //       alignment: Alignment.center,
+              //       child: const Text(
+              //         "Shopping Cart",
+              //         textAlign: TextAlign.center,
+              //         style: TextStyle(
+              //           color: Colors.white,
+              //           fontSize: 20,
+              //           fontFamily: 'Fredoka',
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
+            ]),
+            const SizedBox(height: 5.0),
+            Container(
+              height: 2.0,
+              width: 370,
+              color: const Color(0xFF5D17AD),
+            ),
+            const SizedBox(height: 15),
+            Container(
+              height: 50.0,
+              width: 410.5,
+              color: Colors.purple[900],
             ),
           ]),
-          const SizedBox(height: 5.0),
-          Container(
-            height: 2.0,
-            width: 370,
-            color: const Color(0xFF5D17AD),
-          ),
-          // const SizedBox(height: 43.4),
-          // Container(
-          //   height: 50.0,
-          //   width: 410.5,
-          //   color: Colors.purple[900],
-          // ),
-        ]));
+        ));
   }
 }

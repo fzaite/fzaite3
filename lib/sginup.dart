@@ -154,6 +154,7 @@ class _SignupPageState extends State<Signup>
                                     focusedBorder: UnderlineInputBorder(
                                         borderSide:
                                             BorderSide(color: Colors.green))),
+                                obscureText: true,
                               ),
                               const SizedBox(height: 50.0),
                               SizedBox(

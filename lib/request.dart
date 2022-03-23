@@ -12,7 +12,7 @@ class Request extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.purple,
         ),
-        home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        home: const MyHomePage(title: 'Flutter'),
         debugShowCheckedModeBanner: false,
         routes: <String, WidgetBuilder>{
           '/home': (BuildContext context) => const MyApp(),
@@ -59,15 +59,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Stack(
               children: <Widget>[
                 Container(
-                  alignment: const Alignment(0.0, 0.20),
+                  alignment: const Alignment(0.0, 0.0),
                   height: 100.0,
                   color: Colors.purple,
                   child: const Text(
                     'Welcome',
                     style: TextStyle(
-                        fontFamily: 'Schyler',
+                        fontFamily: 'Fredoka',
                         fontWeight: FontWeight.bold,
-                        fontSize: 35,
+                        fontSize: 40,
                         color: Colors.white),
                   ),
                 ),
@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: const Center(
                           child: Text('Buy more',
                               style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 18,
                                   fontFamily: 'Schyler',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white)),

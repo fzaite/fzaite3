@@ -28,8 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey[700],
-          elevation: 0.0,
+          backgroundColor: Colors.green[600],
+          elevation: 10.0,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back_ios),
             color: Colors.white,
@@ -41,10 +41,18 @@ class _MyHomePageState extends State<MyHomePage> {
           title: const Center(
               child: Text('My Profile',
                   style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white))),
+                    fontFamily: 'Montserrat',
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    shadows: [
+                      Shadow(
+                        blurRadius: 7.0,
+                        color: Colors.black,
+                        offset: Offset(3.0, 3.0),
+                      ),
+                    ],
+                  ))),
           actions: <Widget>[
             Padding(
                 padding: const EdgeInsets.only(right: 8.0),
@@ -70,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 150.0,
                         height: 150.0,
                         decoration: const BoxDecoration(
-                            color: Colors.red,
+                            color: Colors.green,
                             image: DecorationImage(
                                 image: NetworkImage(
                                     'https://th.bing.com/th/id/OIP.CCxNT1SP4UUWL_rqQY178gHaF7?pid=ImgDet&rs=1'),
@@ -79,21 +87,31 @@ class _MyHomePageState extends State<MyHomePage> {
                             boxShadow: [
                               BoxShadow(blurRadius: 7.0, color: Colors.black)
                             ])),
-                    const SizedBox(height: 90.0),
+                    const SizedBox(height: 60.0),
                     const Text(
                       'Fares Alzaite',
                       style: TextStyle(
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Montserrat'),
+                        fontSize: 35.0,
+                        color: Colors.green,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Fredoka',
+                        shadows: [
+                          Shadow(
+                            blurRadius: 7.0,
+                            color: Colors.black,
+                            offset: Offset(3.0, 3.0),
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(height: 15.0),
                     const Text(
-                      'Mobile Development',
+                      'Mobile Developer',
                       style: TextStyle(
-                          fontSize: 17.0,
+                          fontSize: 20.0,
                           fontStyle: FontStyle.italic,
-                          fontFamily: 'Montserrat'),
+                          color: Colors.green,
+                          fontFamily: 'Fredoka'),
                     ),
                   ],
                 ))

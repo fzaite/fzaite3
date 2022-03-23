@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage>
           return Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.green[600],
-                elevation: 0.0,
+                elevation: 10.0,
                 leading: IconButton(
                   icon: const Icon(Icons.arrow_back_ios),
                   color: Colors.white,
@@ -96,8 +96,8 @@ class _MyHomePageState extends State<MyHomePage>
                             animation.value * width, 0.0, 0.0),
                         child: Stack(children: <Widget>[
                           Container(
-                            padding: const EdgeInsets.fromLTRB(
-                                15.0, 110.0, 0.0, 0.0),
+                            padding:
+                                const EdgeInsets.fromLTRB(15.0, 60.0, 0.0, 0.0),
                             child: const Text('Hello',
                                 style: TextStyle(
                                     fontSize: 80.0,
@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage>
                           ),
                           Container(
                             padding: const EdgeInsets.fromLTRB(
-                                16.0, 175.0, 0.0, 0.0),
+                                16.0, 125.0, 0.0, 0.0),
                             child: const Text('There',
                                 style: TextStyle(
                                     fontSize: 80.0,
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage>
                           ),
                           Container(
                             padding: const EdgeInsets.fromLTRB(
-                                220.0, 175.0, 0.0, 0.0),
+                                220.0, 125.0, 0.0, 0.0),
                             child: const Text('.',
                                 style: TextStyle(
                                     fontSize: 80.0,
@@ -176,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage>
                                   borderRadius: BorderRadius.circular(20.0),
                                   shadowColor: Colors.greenAccent,
                                   color: Colors.green,
-                                  elevation: 7.0,
+                                  elevation: 10.0,
                                   child: GestureDetector(
                                     onTap: () {},
                                     child: const Center(
@@ -198,10 +198,10 @@ class _MyHomePageState extends State<MyHomePage>
                                 child: Container(
                                   decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Colors.black,
+                                          color: Colors.blue,
                                           style: BorderStyle.solid,
                                           width: 1.0),
-                                      color: Colors.transparent,
+                                      color: const Color(0xFF09416E),
                                       borderRadius:
                                           BorderRadius.circular(20.0)),
                                   child: Row(
@@ -216,7 +216,8 @@ class _MyHomePageState extends State<MyHomePage>
                                         child: Text('Log in with facebook',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                                fontFamily: 'Montserrat')),
+                                                fontFamily: 'Montserrat',
+                                                color: Colors.white)),
                                       )
                                     ],
                                   ),
@@ -247,7 +248,8 @@ class _MyHomePageState extends State<MyHomePage>
                                     color: Colors.green,
                                     fontFamily: 'Montserrat',
                                     fontWeight: FontWeight.bold,
-                                    decoration: TextDecoration.underline),
+                                    decoration: TextDecoration.underline,
+                                    fontSize: 22),
                               ),
                             ),
                           ]),

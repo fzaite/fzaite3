@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage>
                             width: 400.0,
                             height: 400.0,
                             decoration: BoxDecoration(
-                                color: Colors.green,
+                                color: Colors.red[300],
                                 borderRadius: BorderRadius.circular(10.0)),
                           ),
                         ),
@@ -125,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage>
                             width: 360.0,
                             height: 400.0,
                             decoration: BoxDecoration(
-                                color: Colors.blue,
+                                color: Colors.red[600],
                                 borderRadius: BorderRadius.circular(10.0)),
                           ),
                         ),
