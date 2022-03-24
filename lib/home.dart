@@ -12,6 +12,7 @@ import 'stats.dart';
 import 'productdescription.dart';
 import 'shopping.dart';
 import 'cleandesigns.dart';
+import 'fashion.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
             const ProductDescription(),
         '/shopping': (BuildContext context) => const Shopping(),
         '/Cleandesigns': (BuildContext context) => const Cleandesigns(),
+        '/Fashion': (BuildContext context) => const Fashion(),
       },
       home: const MyHomePage(),
     );
@@ -579,39 +581,39 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.of(context).pushNamed('/shopping');
-              //   },
-              //   child: Container(
-              //     height: 60.0,
-              //     margin: const EdgeInsets.all(10),
-              //     decoration: BoxDecoration(
-              //         gradient: const LinearGradient(
-              //           colors: [
-              //             Color.fromARGB(255, 54, 6, 116),
-              //             Color.fromARGB(255, 111, 23, 182)
-              //           ],
-              //           begin: Alignment.centerLeft,
-              //           end: Alignment.centerRight,
-              //         ),
-              //         borderRadius: BorderRadius.circular(15.0)),
-              //     child: Container(
-              //       constraints:
-              //           const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
-              //       alignment: Alignment.center,
-              //       child: const Text(
-              //         "Shopping Cart",
-              //         textAlign: TextAlign.center,
-              //         style: TextStyle(
-              //           color: Colors.white,
-              //           fontSize: 20,
-              //           fontFamily: 'Fredoka',
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/Fashion');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Fashion designs",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Fredoka',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ]),
             const SizedBox(height: 5.0),
             Container(
