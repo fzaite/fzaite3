@@ -105,6 +105,12 @@ flutter:
          - asset: assets/fonts/YanoneKaffeesatz-Medium.ttf
          - asset: assets/fonts/YanoneKaffeesatz-Light.ttf
          - asset: assets/fonts/YanoneKaffeesatz-SemiBold.ttf
+
+     - family: Comfortaa
+       fonts:
+         - asset: assets/fonts/Comfortaa-Bold.ttf
+         - asset: assets/fonts/Comfortaa-Light.ttf
+         - asset: assets/fonts/Comfortaa-Regular.ttf
   
   #
   # For details regarding fonts from package dependencies,
