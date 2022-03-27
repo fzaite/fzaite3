@@ -59,6 +59,17 @@ class _MyHomePageState extends State<MyHomePage>
                   onPressed: () {},
                 ),
               ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: IconButton(
+                  icon: const Icon(Icons.home),
+                  color: Colors.black.withOpacity(0.7),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/home');
+                  },
+                  iconSize: 30,
+                ),
+              ),
               Positioned(
                 top: 50.0,
                 left: 15.0,

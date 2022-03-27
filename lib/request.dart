@@ -54,7 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
         body: ListView(
-          shrinkWrap: true,
           children: <Widget>[
             Stack(
               children: <Widget>[

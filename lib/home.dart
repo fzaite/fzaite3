@@ -17,6 +17,7 @@ import 'fashion.dart';
 import 'chefprofile.dart';
 import 'hairstylist.dart';
 import 'takeaway.dart';
+import 'simpleapp.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/food': (BuildContext context) => const Food(),
+        '/food': (BuildContext context) {
+          return const Food();
+        },
         '/travel': (BuildContext context) => const Travel(),
         '/card': (BuildContext context) => const Profile(),
         '/request': (BuildContext context) => const Request(),
@@ -44,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/chef': (BuildContext context) => const Chef(),
         '/Hairstylist': (BuildContext context) => const Hairstylist(),
         '/takeaway': (BuildContext context) => const Takeaway(),
+        '/simple': (BuildContext context) => const Simple(),
       },
       home: const MyHomePage(),
     );
@@ -107,7 +111,6 @@ class _MyHomePageState extends State<MyHomePage>
                           Shadow(
                             blurRadius: 7.0,
                             color: Colors.black,
-                            offset: Offset(0.5, 0.5),
                           ),
                         ],
                       ),
@@ -736,39 +739,39 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-              //   GestureDetector(
-              //     onTap: () {
-              //       Navigator.of(context).pushNamed('/Hairstylist');
-              //     },
-              //     child: Container(
-              //       height: 60.0,
-              //       margin: const EdgeInsets.all(10),
-              //       decoration: BoxDecoration(
-              //           gradient: const LinearGradient(
-              //             colors: [
-              //               Color.fromARGB(255, 54, 6, 116),
-              //               Color.fromARGB(255, 111, 23, 182)
-              //             ],
-              //             begin: Alignment.centerLeft,
-              //             end: Alignment.centerRight,
-              //           ),
-              //           borderRadius: BorderRadius.circular(15.0)),
+              //     GestureDetector(
+              //       onTap: () {
+              //         Navigator.of(context).pushNamed('/simple');
+              //       },
               //       child: Container(
-              //         constraints:
-              //             const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
-              //         alignment: Alignment.center,
-              //         child: const Text(
-              //           "Hair Stylist",
-              //           textAlign: TextAlign.center,
-              //           style: TextStyle(
-              //             color: Colors.white,
-              //             fontSize: 20,
-              //             fontFamily: 'Fredoka',
+              //         height: 60.0,
+              //         margin: const EdgeInsets.all(10),
+              //         decoration: BoxDecoration(
+              //             gradient: const LinearGradient(
+              //               colors: [
+              //                 Color.fromARGB(255, 54, 6, 116),
+              //                 Color.fromARGB(255, 111, 23, 182)
+              //               ],
+              //               begin: Alignment.centerLeft,
+              //               end: Alignment.centerRight,
+              //             ),
+              //             borderRadius: BorderRadius.circular(15.0)),
+              //         child: Container(
+              //           constraints:
+              //               const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+              //           alignment: Alignment.center,
+              //           child: const Text(
+              //             "Simple App",
+              //             textAlign: TextAlign.center,
+              //             style: TextStyle(
+              //               color: Colors.white,
+              //               fontSize: 20,
+              //               fontFamily: 'Fredoka',
+              //             ),
               //           ),
               //         ),
               //       ),
               //     ),
-              //   ),
             ]),
             const SizedBox(height: 15),
             Container(

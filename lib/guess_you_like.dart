@@ -10,44 +10,46 @@ class GuessYouLikePage extends StatefulWidget {
 class _GuessYouLikePageState extends State<GuessYouLikePage> {
   @override
   Widget build(BuildContext context) {
-    return ListView(children: <Widget>[
-      const SizedBox(height: 15.0),
-      getFoodItem(
-          'Chicken Chow Mein',
-          'assets/images/food1.jpg',
-          'Chicken fried noodles is a delicious home-cooked dish made from chicken, fragrance and taste',
-          123,
-          23,
-          23,
-          5),
-      const SizedBox(
-        height: 25.0,
-      ),
-      Padding(
-        padding: const EdgeInsets.only(left: 125.0),
-        child: Container(
-          height: 1.0,
-          color: Colors.grey,
+    return ListView(
+      children: <Widget>[
+        const SizedBox(height: 15.0),
+        getFoodItem(
+            'Chicken Chow Mein',
+            'assets/images/food1.jpg',
+            'Chicken fried noodles is a delicious home-cooked dish made from chicken, fragrance and taste',
+            123,
+            23,
+            23,
+            5),
+        const SizedBox(
+          height: 25.0,
         ),
-      ),
-      const SizedBox(height: 15.0),
-      getFoodItem(
-          'Beef vermicelli soup',
-          'assets/images/food2.jpeg',
-          'Beef vermicelli soup is a delicacy made of beef and vermicelli. It has rich nutrition and attractive color.',
-          123,
-          23,
-          23,
-          4),
-      const SizedBox(height: 25.0),
-      Padding(
-        padding: const EdgeInsets.only(left: 100.0),
-        child: Container(
-          height: 1.0,
-          color: Colors.grey,
+        Padding(
+          padding: const EdgeInsets.only(left: 125.0),
+          child: Container(
+            height: 1.0,
+            color: Colors.grey,
+          ),
         ),
-      ),
-    ]);
+        const SizedBox(height: 15.0),
+        getFoodItem(
+            'Beef vermicelli soup',
+            'assets/images/food2.jpeg',
+            'Beef vermicelli soup is a delicacy made of beef and vermicelli. It has rich nutrition and attractive color.',
+            123,
+            23,
+            23,
+            4),
+        const SizedBox(height: 25.0),
+        Padding(
+          padding: const EdgeInsets.only(left: 100.0),
+          child: Container(
+            height: 1.0,
+            color: Colors.grey,
+          ),
+        ),
+      ],
+    );
   }
 
   getFoodItem(String dishName, String imgPath, String description, int calInfo,
