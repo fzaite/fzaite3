@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           )
                         ],
                       ),
-                      const SizedBox(width: 100.0),
+                      const SizedBox(width: 120.0),
                       Container(
                         height: 60.0,
                         width: 125.0,
@@ -176,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Card(
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-        elevation: 7.0,
+        elevation: 1.0,
         child: Column(
           children: <Widget>[
             const SizedBox(height: 12.0),
@@ -188,8 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(30.0),
                     color: Colors.purple,
                     image: const DecorationImage(
-                        image: NetworkImage(
-                            'https://www.alienowners.com/media/blue-alienated-animated-alieneyes-512-x-511-gif.230/full'))),
+                        image: AssetImage('assets/images/chris.jpg'))),
               ),
               Container(
                 margin: const EdgeInsets.only(left: 40.0),

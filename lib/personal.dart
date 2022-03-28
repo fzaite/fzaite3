@@ -26,6 +26,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.green[600],
@@ -70,13 +72,14 @@ class _MyHomePageState extends State<MyHomePage> {
               clipper: getClipper(),
             ),
             Positioned(
-                width: 390.0,
-                top: MediaQuery.of(context).size.height / 5,
+                width: w,
+                top: h / 5,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Container(
-                        width: 150.0,
-                        height: 150.0,
+                        width: 150,
+                        height: 150,
                         decoration: const BoxDecoration(
                             color: Colors.green,
                             image: DecorationImage(

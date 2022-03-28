@@ -105,11 +105,11 @@ class _MyHomePageState extends State<MyHomePage>
                       children: <Widget>[
                         Positioned(
                           top: -25.0,
-                          left: -50.0,
+                          left: 25.0,
                           child: Container(
                             transform: Matrix4.translationValues(0.0,
                                 delayedCardAnimation.value * devHeight, 0.0),
-                            width: 400.0,
+                            width: 250.0,
                             height: 400.0,
                             decoration: BoxDecoration(
                                 color: Colors.red[300],
@@ -118,11 +118,11 @@ class _MyHomePageState extends State<MyHomePage>
                         ),
                         Positioned(
                           top: -15.0,
-                          left: -30.0,
+                          left: 10.0,
                           child: Container(
                             transform: Matrix4.translationValues(
                                 0.0, cardAnimation.value * devHeight, 0.0),
-                            width: 360.0,
+                            width: 280.0,
                             height: 400.0,
                             decoration: BoxDecoration(
                                 color: Colors.red[600],
@@ -173,10 +173,11 @@ class _MyHomePageState extends State<MyHomePage>
                                       const SizedBox(width: 4.0),
                                       Image.asset(
                                         'assets/images/burger1.jpg',
-                                        height: 30.0,
-                                        width: 30.0,
+                                        height: 40.0,
+                                        width: 40.0,
+                                        fit: BoxFit.cover,
                                       ),
-                                      const SizedBox(width: 110.0),
+                                      const SizedBox(width: 90.0),
                                       const Text(
                                         '24 H/D',
                                         style: TextStyle(
