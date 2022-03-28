@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'currencyservice.dart';
 
@@ -21,7 +23,7 @@ class _InputRedPageState extends State<InputRedPage> {
       backgroundColor: const Color(0xFFEC5759),
       body: Column(
         children: <Widget>[
-          const SizedBox(height: 25.0),
+          const SizedBox(height: 85.0),
           InkWell(
             onTap: () {
               setState(() {
@@ -32,7 +34,7 @@ class _InputRedPageState extends State<InputRedPage> {
               'tap to delete',
               style: TextStyle(
                   color: Color(0xFFF1ABAB),
-                  fontSize: 17.0,
+                  fontSize: 20.0,
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.bold),
             ),
@@ -200,14 +202,14 @@ class _InputRedPageState extends State<InputRedPage> {
     );
   }
 
-  calculateNumber(number) {
+  calculateNumber(int number) {
     if (currInput == 0) {
       setState(() {
         currInput = number;
       });
     } else {
       setState(() {
-        //currInput = (currInput * 10) + number;
+        currInput = (currInput * 10) + number;
       });
     }
   }

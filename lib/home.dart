@@ -17,7 +17,7 @@ import 'fashion.dart';
 import 'chefprofile.dart';
 import 'hairstylist.dart';
 import 'takeaway.dart';
-import 'simpleapp.dart';
+import 'simple.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -739,39 +739,39 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                 ),
               ),
-              //     GestureDetector(
-              //       onTap: () {
-              //         Navigator.of(context).pushNamed('/simple');
-              //       },
-              //       child: Container(
-              //         height: 60.0,
-              //         margin: const EdgeInsets.all(10),
-              //         decoration: BoxDecoration(
-              //             gradient: const LinearGradient(
-              //               colors: [
-              //                 Color.fromARGB(255, 54, 6, 116),
-              //                 Color.fromARGB(255, 111, 23, 182)
-              //               ],
-              //               begin: Alignment.centerLeft,
-              //               end: Alignment.centerRight,
-              //             ),
-              //             borderRadius: BorderRadius.circular(15.0)),
-              //         child: Container(
-              //           constraints:
-              //               const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
-              //           alignment: Alignment.center,
-              //           child: const Text(
-              //             "Simple App",
-              //             textAlign: TextAlign.center,
-              //             style: TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 20,
-              //               fontFamily: 'Fredoka',
-              //             ),
-              //           ),
-              //         ),
-              //       ),
-              //     ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/simple');
+                },
+                child: Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 54, 6, 116),
+                          Color.fromARGB(255, 111, 23, 182)
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15.0)),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 185.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Simple App",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Fredoka',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ]),
             const SizedBox(height: 15),
             Container(

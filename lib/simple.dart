@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
+import 'home.dart';
 
 class Simple extends StatelessWidget {
   const Simple({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      routes: <String, WidgetBuilder>{
+        '/home': (BuildContext context) => const MyApp(),
+      },
+      home: const MyHomePage(),
     );
   }
 }
