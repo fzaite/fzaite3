@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fzaite3/chefprofile.dart';
+import 'package:fzaite3/fruits.dart';
 import 'food.dart';
 import 'travel.dart';
 import 'profile.dart';
@@ -18,6 +19,10 @@ import 'chefprofile.dart';
 import 'hairstylist.dart';
 import 'takeaway.dart';
 import 'simple.dart';
+import 'fruits.dart';
+import 'myprofile.dart';
+import 'carservice.dart';
+import 'rentalcar.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -48,6 +53,10 @@ class MyApp extends StatelessWidget {
         '/Hairstylist': (BuildContext context) => const Hairstylist(),
         '/takeaway': (BuildContext context) => const Takeaway(),
         '/simple': (BuildContext context) => const Simple(),
+        '/Fruits': (BuildContext context) => const Fruits(),
+        '/myprofile': (BuildContext context) => const Myprofile(),
+        '/car': (BuildContext context) => const Car(),
+        '/Rental': (BuildContext context) => const Rental(),
       },
       home: const MyHomePage(),
     );
@@ -767,6 +776,154 @@ class _MyHomePageState extends State<MyHomePage>
                         alignment: Alignment.center,
                         child: const Text(
                           "Simple App",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontFamily: 'Fredoka',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ]),
+                const SizedBox(height: 5.0),
+                Container(
+                  height: 2.0,
+                  width: w * 0.86,
+                  color: const Color(0xFF5D17AD),
+                ),
+                Row(children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/Fruits');
+                    },
+                    child: Container(
+                      height: 60.0,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(255, 54, 6, 116),
+                              Color.fromARGB(255, 111, 23, 182)
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                          borderRadius: BorderRadius.circular(15.0)),
+                      child: Container(
+                        constraints:
+                            BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "Fruits ",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 19,
+                            fontFamily: 'Fredoka',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/myprofile');
+                    },
+                    child: Container(
+                      height: 60.0,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(255, 54, 6, 116),
+                              Color.fromARGB(255, 111, 23, 182)
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                          borderRadius: BorderRadius.circular(15.0)),
+                      child: Container(
+                        constraints:
+                            BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "My Profile",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontFamily: 'Fredoka',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ]),
+                const SizedBox(height: 5.0),
+                Container(
+                  height: 2.0,
+                  width: w * 0.86,
+                  color: const Color(0xFF5D17AD),
+                ),
+                Row(children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/car');
+                    },
+                    child: Container(
+                      height: 60.0,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(255, 54, 6, 116),
+                              Color.fromARGB(255, 111, 23, 182)
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                          borderRadius: BorderRadius.circular(15.0)),
+                      child: Container(
+                        constraints:
+                            BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "Car Service",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 19,
+                            fontFamily: 'Fredoka',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/Rental');
+                    },
+                    child: Container(
+                      height: 60.0,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(255, 54, 6, 116),
+                              Color.fromARGB(255, 111, 23, 182)
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                          borderRadius: BorderRadius.circular(15.0)),
+                      child: Container(
+                        constraints:
+                            BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "Rental Cars",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,

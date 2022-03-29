@@ -131,7 +131,26 @@ flutter:
          - asset: assets/fonts/Comfortaa-Bold.ttf
          - asset: assets/fonts/Comfortaa-Light.ttf
          - asset: assets/fonts/Comfortaa-Regular.ttf
-  
+     
+     - family: Cabin
+       fonts:
+         - asset: assets/fonts/Cabin-Regular.ttf
+         - asset: assets/fonts/Cabin-Medium.ttf
+         - asset: assets/fonts/Cabin-Italic.ttf
+         - asset: assets/fonts/Cabin-Bold.ttf
+         - asset: assets/fonts/Cabin-BoldItalic.ttf
+         - asset: assets/fonts/Cabin-MediumItalic.ttf
+         - asset: assets/fonts/Cabin-SemiBold.ttf
+         - asset: assets/fonts/Cabin-SemiBoldItalic.ttf
+
+     - family: Oswald
+       fonts:
+         - asset: assets/fonts/Oswald-ExtraLight.ttf
+         - asset: assets/fonts/Oswald-Light.ttf
+         - asset: assets/fonts/Oswald-Medium.ttf
+         - asset: assets/fonts/Oswald-Bold.ttf
+         - asset: assets/fonts/Oswald-Regular.ttf
+         - asset: assets/fonts/Oswald-SemiBold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
