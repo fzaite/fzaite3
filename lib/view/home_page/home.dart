@@ -90,14 +90,14 @@ class _MyHomePageState extends State<MyHomePage>
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.purple[900],
-        title: const Center(
+        title: Center(
           child: Text(
             'HOME PAGE',
             style: TextStyle(
               fontFamily: 'Fredoka',
-              fontSize: 28,
+              fontSize: w / 16,
               color: Colors.white,
-              shadows: [
+              shadows: const [
                 Shadow(
                   blurRadius: 7.0,
                   color: Colors.black,
@@ -124,17 +124,17 @@ class _MyHomePageState extends State<MyHomePage>
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 10.0, top: 20.0, bottom: 23),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0, bottom: 23),
                   child: Text(
                     'You Can Choose Any Project You Want To Start It :',
                     style: TextStyle(
                       fontFamily: 'Fredoka',
-                      fontSize: 17.0,
+                      fontSize: w / 28,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF5D17AD),
-                      shadows: [
+                      color: const Color(0xFF5D17AD),
+                      shadows: const [
                         Shadow(
                           blurRadius: 7.0,
                           color: Colors.black,

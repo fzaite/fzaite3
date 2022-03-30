@@ -32,12 +32,12 @@ class _Home6State extends State<Home6> {
           child: Container(
             constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
             alignment: Alignment.center,
-            child: const Text(
+            child: Text(
               "Furniture",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 20,
+                fontSize: w / 21,
                 fontFamily: 'Fredoka',
               ),
             ),
@@ -64,10 +64,13 @@ class _Home6State extends State<Home6> {
           child: Container(
             constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
             alignment: Alignment.center,
-            child: const Text(
+            child: Text(
               "Stats",
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: w / 21,
+              ),
             ),
           ),
         ),
