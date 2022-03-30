@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'food.dart';
-import 'view/home_page/home.dart';
+import '../home_page/home.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);

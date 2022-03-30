@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'view/home_page/home.dart';
+import '../../view/home_page/home.dart';
 import 'sginup.dart';
-import 'profile.dart';
+import '../restaurant/profile.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);

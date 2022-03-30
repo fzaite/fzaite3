@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fzaite3/profile.dart';
+import 'package:fzaite3/view/restaurant/profile.dart';
 import 'menu.dart';
-import 'view/home_page/home.dart';
+import '../home_page/home.dart';
 import 'profile.dart';
 
 class Food extends StatelessWidget {
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage>
           },
         ),
         title: const Center(
-            child: Text('Resurant',
+            child: Text('Restaurant',
                 style: TextStyle(
                     fontFamily: 'Montserrat',
                     fontSize: 33,

@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'view/home_page/home.dart';
+import '../home_page/home.dart';
 
 class Fo extends StatelessWidget {
   const Fo({Key? key}) : super(key: key);

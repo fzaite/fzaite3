@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view/home_page/home.dart';
+import '../home_page/home.dart';
 import 'fashion2.dart';
 
 class Fashion extends StatelessWidget {
