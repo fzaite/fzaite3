@@ -10,6 +10,7 @@ import 'home9.dart';
 import 'home10.dart';
 import 'home11.dart';
 import 'home12.dart';
+import 'home13.dart';
 import 'line.dart';
 import 'footer.dart';
 import '../restaurant/food.dart';
@@ -34,6 +35,7 @@ import '../fruits/fruits.dart';
 import '../others/myprofile.dart';
 import '../others/carservice.dart';
 import '../others/rentalcar.dart';
+import '../mobile_shopping/mobile_shopping.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -68,6 +70,7 @@ class MyApp extends StatelessWidget {
         '/myprofile': (BuildContext context) => const Myprofile(),
         '/car': (BuildContext context) => const Car(),
         '/Rental': (BuildContext context) => const Rental(),
+        '/mobile': (BuildContext context) => const Mobile(),
       },
       home: const MyHomePage(),
     );
@@ -130,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage>
                     'You Can Choose Any Project You Want To Start It :',
                     style: TextStyle(
                       fontFamily: 'Fredoka',
-                      fontSize: w / 28,
+                      fontSize: w / 24,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xFF5D17AD),
@@ -176,6 +179,9 @@ class _MyHomePageState extends State<MyHomePage>
             const SizedBox(height: 5.0),
             const Line(),
             const Home12(),
+            const SizedBox(height: 5.0),
+            const Line(),
+            const Home13(),
             const SizedBox(height: 15),
             const Footer(),
           ],
