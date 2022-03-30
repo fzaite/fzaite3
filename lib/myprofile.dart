@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'view/home_page/home.dart';
 
 class Myprofile extends StatelessWidget {
   const Myprofile({Key? key}) : super(key: key);

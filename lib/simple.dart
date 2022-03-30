@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
-import 'home.dart';
+import 'view/home_page/home.dart';
 
 class Simple extends StatelessWidget {
   const Simple({Key? key}) : super(key: key);

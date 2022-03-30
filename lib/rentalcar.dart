@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fzaite3/home.dart';
+import 'package:fzaite3/view/home_page/home.dart';
 import 'carservice.dart';
-import 'home.dart';
+import 'view/home_page/home.dart';
 
 class Rental extends StatelessWidget {
   const Rental({Key? key}) : super(key: key);

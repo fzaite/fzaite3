@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fzaite3/profile.dart';
 import 'menu.dart';
-import 'home.dart';
+import 'view/home_page/home.dart';
 import 'profile.dart';
 
 class Food extends StatelessWidget {

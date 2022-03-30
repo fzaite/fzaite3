@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'furniture.dart';
-import 'home.dart';
+import 'view/home_page/home.dart';
 import 'stats.dart';
 
 class Shopping extends StatelessWidget {
