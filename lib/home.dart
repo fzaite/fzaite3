@@ -23,6 +23,7 @@ import 'fruits.dart';
 import 'myprofile.dart';
 import 'carservice.dart';
 import 'rentalcar.dart';
+import 'home2.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -131,74 +132,7 @@ class _MyHomePageState extends State<MyHomePage>
                         ),
                       ),
                     ]),
-                Row(children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushNamed('/profile');
-                    },
-                    child: Container(
-                      height: 60.0,
-                      margin: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [
-                              Color.fromARGB(255, 54, 6, 116),
-                              Color.fromARGB(255, 111, 23, 182)
-                            ],
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                          ),
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Container(
-                        constraints:
-                            BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          "Profile",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontFamily: 'Fredoka',
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushNamed('/sgin');
-                    },
-                    child: Container(
-                      height: 60.0,
-                      margin: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [
-                              Color.fromARGB(255, 54, 6, 116),
-                              Color.fromARGB(255, 111, 23, 182)
-                            ],
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                          ),
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Container(
-                        constraints:
-                            BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          "LogIn & Registration",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontFamily: 'Fredoka',
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ]),
+                const Home2(),
                 const SizedBox(height: 5.0),
                 Container(
                   height: 2.0,
