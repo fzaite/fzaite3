@@ -11,6 +11,7 @@ import 'home10.dart';
 import 'home11.dart';
 import 'home12.dart';
 import 'home13.dart';
+import 'home14.dart';
 import 'line.dart';
 import 'footer.dart';
 import '../restaurant/food.dart';
@@ -37,6 +38,7 @@ import '../others/carservice.dart';
 import '../others/rentalcar.dart';
 import '../mobile_shopping/mobile_shopping.dart';
 import '../plants/plants.dart';
+import '../others/scroll.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -73,6 +75,7 @@ class MyApp extends StatelessWidget {
         '/Rental': (BuildContext context) => const Rental(),
         '/mobile': (BuildContext context) => const Mobile(),
         '/Plants': (BuildContext context) => const Plants(),
+        '/scroll': (BuildContext context) => const Scroll(),
       },
       home: const MyHomePage(),
     );
@@ -184,6 +187,9 @@ class _MyHomePageState extends State<MyHomePage>
             const SizedBox(height: 5.0),
             const Line(),
             const Home13(),
+            const SizedBox(height: 5.0),
+            const Line(),
+            const Home14(),
             const SizedBox(height: 15),
             const Footer(),
           ],
