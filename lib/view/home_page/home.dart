@@ -36,6 +36,7 @@ import '../others/myprofile.dart';
 import '../others/carservice.dart';
 import '../others/rentalcar.dart';
 import '../mobile_shopping/mobile_shopping.dart';
+import '../plants/plants.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -71,6 +72,7 @@ class MyApp extends StatelessWidget {
         '/car': (BuildContext context) => const Car(),
         '/Rental': (BuildContext context) => const Rental(),
         '/mobile': (BuildContext context) => const Mobile(),
+        '/Plants': (BuildContext context) => const Plants(),
       },
       home: const MyHomePage(),
     );
