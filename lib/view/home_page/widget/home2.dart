@@ -31,7 +31,8 @@ class _Home2State extends State<Home2> {
                 ),
                 borderRadius: BorderRadius.circular(15.0)),
             child: Container(
-              constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+              constraints:
+                  BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
               alignment: Alignment.center,
               child: Text(
                 "Profile",
@@ -63,7 +64,8 @@ class _Home2State extends State<Home2> {
                 ),
                 borderRadius: BorderRadius.circular(15.0)),
             child: Container(
-              constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+              constraints:
+                  BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
               alignment: Alignment.center,
               child: Text(
                 "LogIn & Registration",

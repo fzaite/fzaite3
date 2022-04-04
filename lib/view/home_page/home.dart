@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home2.dart';
-import 'home3.dart';
-import 'home4.dart';
-import 'home5.dart';
-import 'home6.dart';
-import 'home7.dart';
-import 'home8.dart';
-import 'home9.dart';
-import 'home10.dart';
-import 'home11.dart';
-import 'home12.dart';
-import 'home13.dart';
-import 'home14.dart';
-import 'line.dart';
-import 'footer.dart';
+import 'pages/f1home.dart' as f1home;
+import 'pages/f2home.dart' as f2home;
+import 'pages/f3home.dart' as f3home;
 import '../restaurant/food.dart';
 import '../travel/travel.dart';
 import '../restaurant/profile.dart';
@@ -91,110 +79,81 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
+  late TabController controller;
+  @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    controller = TabController(length: 3, vsync: this);
+    controller.addListener(() {
+      setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    // ignore: todo
+    // TODO: implement dispose
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.purple[900],
-        title: Center(
-          child: Text(
-            'HOME PAGE',
-            style: TextStyle(
-              fontFamily: 'Fredoka',
-              fontSize: w / 16,
-              color: Colors.white,
-              shadows: const [
-                Shadow(
-                  blurRadius: 7.0,
-                  color: Colors.black,
-                  offset: Offset(3.0, 3.0),
-                ),
-              ],
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.purple[900],
+          title: Center(
+            child: Text(
+              'HOME PAGE ${controller.index + 1}',
+              style: TextStyle(
+                fontFamily: 'Fredoka',
+                fontSize: w / 18,
+                color: Colors.white,
+                shadows: const [
+                  Shadow(
+                    blurRadius: 7.0,
+                    color: Colors.black,
+                    offset: Offset(3.0, 3.0),
+                  ),
+                ],
+              ),
             ),
           ),
+          bottom: TabBar(
+              controller: controller,
+              indicatorColor: Colors.white,
+              tabs: const [
+                Tab(
+                  icon: Icon(
+                    Icons.home,
+                    size: 30,
+                  ),
+                ),
+                Tab(
+                  icon: Icon(
+                    Icons.home,
+                    size: 30,
+                  ),
+                ),
+                Tab(
+                  icon: Icon(
+                    Icons.home,
+                    size: 30,
+                  ),
+                )
+              ]),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  height: 120.0,
-                  width: w,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/bb1.png'),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0, bottom: 23),
-                  child: Text(
-                    'You Can Choose Any Project You Want To Start It :',
-                    style: TextStyle(
-                      fontFamily: 'Fredoka',
-                      fontSize: w / 24,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.bold,
-                      color: const Color(0xFF5D17AD),
-                      shadows: const [
-                        Shadow(
-                          blurRadius: 7.0,
-                          color: Colors.black,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const Home2(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home3(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home4(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home5(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home6(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home7(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home8(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home9(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home10(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home11(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home12(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home13(),
-            const SizedBox(height: 5.0),
-            const Line(),
-            const Home14(),
-            const SizedBox(height: 15),
-            const Footer(),
+        body: TabBarView(
+          controller: controller,
+          children: const [
+            f1home.F1home(),
+            f2home.F2home(),
+            f3home.F3home(),
           ],
-        ),
-      ),
-    );
+        ));
   }
 }

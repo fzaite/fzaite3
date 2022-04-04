@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class Home10 extends StatefulWidget {
-  const Home10({Key? key}) : super(key: key);
+class Home13 extends StatefulWidget {
+  const Home13({Key? key}) : super(key: key);
 
   @override
-  State<Home10> createState() => _Home10State();
+  State<Home13> createState() => _Home13State();
 }
 
-class _Home10State extends State<Home10> {
+class _Home13State extends State<Home13> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     return Row(children: [
       GestureDetector(
         onTap: () {
-          Navigator.of(context).pushNamed('/takeaway');
+          Navigator.of(context).pushNamed('/mobile');
         },
         child: Container(
           height: 60.0,
@@ -30,10 +30,11 @@ class _Home10State extends State<Home10> {
               ),
               borderRadius: BorderRadius.circular(15.0)),
           child: Container(
-            constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+            constraints:
+                BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
             alignment: Alignment.center,
             child: Text(
-              "Takeaway ",
+              "Mobile Shopping",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
@@ -46,7 +47,7 @@ class _Home10State extends State<Home10> {
       ),
       GestureDetector(
         onTap: () {
-          Navigator.of(context).pushNamed('/simple');
+          Navigator.of(context).pushNamed('/Plants');
         },
         child: Container(
           height: 60.0,
@@ -62,10 +63,11 @@ class _Home10State extends State<Home10> {
               ),
               borderRadius: BorderRadius.circular(15.0)),
           child: Container(
-            constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+            constraints:
+                BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
             alignment: Alignment.center,
             child: Text(
-              "Simple App",
+              "Plants",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,

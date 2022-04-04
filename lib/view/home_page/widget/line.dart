@@ -12,7 +12,7 @@ class _LineState extends State<Line> {
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     return Container(
-      height: 2.0,
+      height: 2.5,
       width: w * 0.80,
       color: const Color(0xFF5D17AD),
     );

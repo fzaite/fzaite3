@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class Home12 extends StatefulWidget {
-  const Home12({Key? key}) : super(key: key);
+class Home7 extends StatefulWidget {
+  const Home7({Key? key}) : super(key: key);
 
   @override
-  State<Home12> createState() => _Home12State();
+  State<Home7> createState() => _Home7State();
 }
 
-class _Home12State extends State<Home12> {
+class _Home7State extends State<Home7> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     return Row(children: [
       GestureDetector(
         onTap: () {
-          Navigator.of(context).pushNamed('/car');
+          Navigator.of(context).pushNamed('/Product_Description');
         },
         child: Container(
           height: 60.0,
@@ -30,14 +30,15 @@ class _Home12State extends State<Home12> {
               ),
               borderRadius: BorderRadius.circular(15.0)),
           child: Container(
-            constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+            constraints:
+                BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
             alignment: Alignment.center,
             child: Text(
-              "Car Service",
+              "Product Description",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w / 21,
+                fontSize: w / 22,
                 fontFamily: 'Fredoka',
               ),
             ),
@@ -46,7 +47,7 @@ class _Home12State extends State<Home12> {
       ),
       GestureDetector(
         onTap: () {
-          Navigator.of(context).pushNamed('/Rental');
+          Navigator.of(context).pushNamed('/shopping');
         },
         child: Container(
           height: 60.0,
@@ -62,10 +63,11 @@ class _Home12State extends State<Home12> {
               ),
               borderRadius: BorderRadius.circular(15.0)),
           child: Container(
-            constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+            constraints:
+                BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
             alignment: Alignment.center,
             child: Text(
-              "Rental Cars",
+              "Shopping Cart",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,

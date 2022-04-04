@@ -46,7 +46,7 @@ class _Home14State extends State<Home14> {
       ),
       //   GestureDetector(
       //     onTap: () {
-      //       Navigator.of(context).pushNamed('/Plants');
+      //       Navigator.of(context).pushNamed('/mycode');
       //     },
       //     child: Container(
       //       height: 60.0,
@@ -65,7 +65,7 @@ class _Home14State extends State<Home14> {
       //         constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
       //         alignment: Alignment.center,
       //         child: Text(
-      //           "Plants",
+      //           "My Code",
       //           textAlign: TextAlign.center,
       //           style: TextStyle(
       //             color: Colors.white,

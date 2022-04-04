@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class Home6 extends StatefulWidget {
-  const Home6({Key? key}) : super(key: key);
+class Home9 extends StatefulWidget {
+  const Home9({Key? key}) : super(key: key);
 
   @override
-  State<Home6> createState() => _Home6State();
+  State<Home9> createState() => _Home9State();
 }
 
-class _Home6State extends State<Home6> {
+class _Home9State extends State<Home9> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     return Row(children: [
       GestureDetector(
         onTap: () {
-          Navigator.of(context).pushNamed('/furniture');
+          Navigator.of(context).pushNamed('/chef');
         },
         child: Container(
           height: 60.0,
@@ -30,14 +30,15 @@ class _Home6State extends State<Home6> {
               ),
               borderRadius: BorderRadius.circular(15.0)),
           child: Container(
-            constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+            constraints:
+                BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
             alignment: Alignment.center,
             child: Text(
-              "Furniture",
+              "Chef Profile",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w / 21,
+                fontSize: w / 22,
                 fontFamily: 'Fredoka',
               ),
             ),
@@ -46,7 +47,7 @@ class _Home6State extends State<Home6> {
       ),
       GestureDetector(
         onTap: () {
-          Navigator.of(context).pushNamed('/stats');
+          Navigator.of(context).pushNamed('/Hairstylist');
         },
         child: Container(
           height: 60.0,
@@ -62,14 +63,16 @@ class _Home6State extends State<Home6> {
               ),
               borderRadius: BorderRadius.circular(15.0)),
           child: Container(
-            constraints: BoxConstraints(maxWidth: w * 0.45, minHeight: 50.0),
+            constraints:
+                BoxConstraints(maxWidth: w * 0.45 - 2, minHeight: 50.0),
             alignment: Alignment.center,
             child: Text(
-              "Stats",
+              "Hair Stylist",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w / 21,
+                fontSize: w / 22,
+                fontFamily: 'Fredoka',
               ),
             ),
           ),
