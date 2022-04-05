@@ -6,7 +6,6 @@ import '../widget/home4.dart';
 import '../widget/home5.dart';
 import '../widget/home6.dart';
 import '../widget/line.dart';
-import '../widget/footer.dart';
 
 class F1home extends StatefulWidget {
   const F1home({Key? key}) : super(key: key);
@@ -37,7 +36,6 @@ class _F1homeState extends State<F1home> {
           Line(),
           Home6(),
           SizedBox(height: 15),
-          Footer(),
         ],
       ),
     );

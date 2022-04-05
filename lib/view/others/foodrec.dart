@@ -248,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       const SizedBox(height: 5.0),
                       Container(
-                        height: 4.0,
+                        height: 1.0,
                         width: 90.0,
                         color: Colors.orange,
                       )

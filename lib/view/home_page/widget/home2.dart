@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fzaite3/view/color.dart';
 
 class Home2 extends StatefulWidget {
   const Home2({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class _Home2State extends State<Home2> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
+
     return Row(
       children: [
         GestureDetector(
@@ -22,10 +24,7 @@ class _Home2State extends State<Home2> {
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 54, 6, 116),
-                    Color.fromARGB(255, 111, 23, 182)
-                  ],
+                  colors: [Color(purple), Color(lightpurple)],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                 ),
@@ -39,7 +38,7 @@ class _Home2State extends State<Home2> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: w / 21,
+                  fontSize: w / 23,
                   fontFamily: 'Fredoka',
                 ),
               ),
@@ -55,10 +54,7 @@ class _Home2State extends State<Home2> {
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 54, 6, 116),
-                    Color.fromARGB(255, 111, 23, 182)
-                  ],
+                  colors: [Color(purple), Color(lightpurple)],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                 ),
@@ -72,7 +68,7 @@ class _Home2State extends State<Home2> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: w / 22,
+                  fontSize: w / 23,
                   fontFamily: 'Fredoka',
                 ),
               ),

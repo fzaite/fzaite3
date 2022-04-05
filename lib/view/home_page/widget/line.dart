@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fzaite3/view/color.dart';
 
 class Line extends StatefulWidget {
   const Line({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _LineState extends State<Line> {
     return Container(
       height: 2.5,
       width: w * 0.80,
-      color: const Color(0xFF5D17AD),
+      color: const Color(purple),
     );
   }
 }

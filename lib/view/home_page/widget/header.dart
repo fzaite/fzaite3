@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fzaite3/view/color.dart';
+import 'package:fzaite3/view/string.dart';
 
 class Header extends StatefulWidget {
   const Header({Key? key}) : super(key: key);
@@ -26,16 +28,16 @@ class _HeaderState extends State<Header> {
         Padding(
           padding: const EdgeInsets.only(top: 20.0, bottom: 23),
           child: Text(
-            'You Can Choose Any Project You Want To Start It :',
+            you,
             style: TextStyle(
               fontFamily: 'Fredoka',
-              fontSize: w / 24,
+              fontSize: w / 26,
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.bold,
-              color: const Color(0xFF5D17AD),
+              color: const Color(lightpurple),
               shadows: const [
                 Shadow(
-                  blurRadius: 7.0,
+                  blurRadius: 4.0,
                   color: Colors.black,
                 ),
               ],

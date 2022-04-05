@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fzaite3/view/color.dart';
 
 class Home3 extends StatefulWidget {
   const Home3({Key? key}) : super(key: key);
@@ -22,10 +23,7 @@ class _Home3State extends State<Home3> {
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 54, 6, 116),
-                    Color.fromARGB(255, 111, 23, 182)
-                  ],
+                  colors: [Color(purple), Color(lightpurple)],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                 ),
@@ -39,7 +37,7 @@ class _Home3State extends State<Home3> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: w / 21,
+                  fontSize: w / 23,
                   fontFamily: 'Fredoka',
                 ),
               ),
@@ -55,10 +53,7 @@ class _Home3State extends State<Home3> {
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 54, 6, 116),
-                    Color.fromARGB(255, 111, 23, 182)
-                  ],
+                  colors: [Color(purple), Color(lightpurple)],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                 ),
@@ -72,7 +67,7 @@ class _Home3State extends State<Home3> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: w / 21,
+                  fontSize: w / 23,
                   fontFamily: 'Fredoka',
                 ),
               ),

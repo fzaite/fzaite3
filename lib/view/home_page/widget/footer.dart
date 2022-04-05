@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fzaite3/view/color.dart';
+import 'package:fzaite3/view/string.dart';
 
 class Footer extends StatefulWidget {
   const Footer({Key? key}) : super(key: key);
@@ -10,20 +12,19 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
-    double w = MediaQuery.of(context).size.width;
     return Container(
         height: 50.0,
         width: MediaQuery.of(context).size.width,
-        color: Colors.purple[900],
-        child: Center(
+        color: const Color(purple),
+        child: const Center(
           child: Text(
-            'Fares Alzaite',
+            f,
             style: TextStyle(
-              fontSize: w * .05,
+              fontSize: 25,
               fontFamily: 'Fredoka',
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              shadows: const [
+              shadows: [
                 Shadow(
                   blurRadius: 7.0,
                   color: Colors.black,

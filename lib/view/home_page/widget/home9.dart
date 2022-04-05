@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fzaite3/view/color.dart';
 
 class Home9 extends StatefulWidget {
   const Home9({Key? key}) : super(key: key);
@@ -21,10 +22,7 @@ class _Home9State extends State<Home9> {
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 54, 6, 116),
-                  Color.fromARGB(255, 111, 23, 182)
-                ],
+                colors: [Color(purple), Color(lightpurple)],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
               ),
@@ -38,7 +36,7 @@ class _Home9State extends State<Home9> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w / 22,
+                fontSize: w / 23,
                 fontFamily: 'Fredoka',
               ),
             ),
@@ -54,10 +52,7 @@ class _Home9State extends State<Home9> {
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 54, 6, 116),
-                  Color.fromARGB(255, 111, 23, 182)
-                ],
+                colors: [Color(purple), Color(lightpurple)],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
               ),
@@ -71,7 +66,7 @@ class _Home9State extends State<Home9> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w / 22,
+                fontSize: w / 23,
                 fontFamily: 'Fredoka',
               ),
             ),
