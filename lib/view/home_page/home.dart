@@ -32,6 +32,8 @@ import '../mobile_shopping/mobile_shopping.dart';
 import '../plants/plants.dart';
 import '../others/scroll.dart';
 import '../Cakes_pastries/cakes.dart';
+import '../restaurant_reviews/restaurant_reviews.dart';
+import '../others/starbucks.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -71,6 +73,8 @@ class MyApp extends StatelessWidget {
           '/Plants': (BuildContext context) => const Plants(),
           '/scroll': (BuildContext context) => const Scroll(),
           '/cakes': (BuildContext context) => const Cakes(),
+          '/reviews': (BuildContext context) => const Restaurant(),
+          '/Starbucks': (BuildContext context) => const Starbucks(),
         },
         home: const MyHomePage(),
       ),

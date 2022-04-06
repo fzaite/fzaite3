@@ -39,26 +39,15 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: const Color(0xFFF9EFEB),
-        appBar: AppBar(
-          backgroundColor: const Color(0xFFFD7465),
-          elevation: 0.0,
-          leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/home');
-              },
-              icon: const Icon(
-                Icons.home,
-                size: 30,
-              )),
-        ),
         body: ListView(
           children: <Widget>[
             Stack(
               children: <Widget>[
                 Container(
-                  height: 250.0,
+                  height: 240.0,
                   decoration: const BoxDecoration(
                       borderRadius:
                           BorderRadius.only(bottomRight: Radius.circular(75.0)),
@@ -70,6 +59,18 @@ class _MyHomePageState extends State<MyHomePage>
                       borderRadius:
                           BorderRadius.only(bottomRight: Radius.circular(65.0)),
                       color: Color(0xFFFE8A7E)),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: w - 60),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/home');
+                      },
+                      icon: const Icon(
+                        Icons.home,
+                        size: 35,
+                        color: Colors.white,
+                      )),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(top: 35.0, left: 15.0),

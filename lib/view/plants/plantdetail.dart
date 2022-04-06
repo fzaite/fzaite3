@@ -44,7 +44,7 @@ class PlantDetail extends StatelessWidget {
                   onPressed: () {},
                   backgroundColor: const Color(0xFF4DA774),
                   mini: true,
-                  elevation: 0.0,
+                  elevation: 5.0,
                   child: const Icon(Icons.shopping_cart,
                       color: Colors.white, size: 15.0),
                 ),
@@ -60,7 +60,7 @@ class PlantDetail extends StatelessWidget {
                       color: Colors.white),
                   child: const Center(
                     child: Text(
-                      '1',
+                      '.',
                       style: TextStyle(
                           color: Color(0xFF399D63), fontFamily: 'Montserrat'),
                     ),
