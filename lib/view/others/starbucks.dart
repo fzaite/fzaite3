@@ -29,6 +29,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Scaffold(
         body: ListView(
       children: <Widget>[
@@ -38,9 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.only(top: 15.0),
               child: IconButton(
-                  icon: const Icon(Icons.arrow_back),
+                  icon: Icon(
+                    Icons.arrow_back,
+                    size: w * 0.06,
+                  ),
                   color: Colors.black,
-                  iconSize: 30,
+                  iconSize: w * 0.06,
                   onPressed: () {
                     Navigator.of(context).pushNamed('/home');
                   }),
@@ -50,40 +55,42 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Stack(
                 children: <Widget>[
                   Container(
-                    height: 50.0,
-                    width: 50.0,
+                    height: 50,
+                    width: 50,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.0),
                         color: Colors.transparent),
                   ),
                   Container(
-                    height: 40.0,
-                    width: 40.0,
+                    height: w * .035 + h * .035,
+                    width: w * .035 + h * .035,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
+                        borderRadius: BorderRadius.circular(w * 0.8),
                         color: const Color(0xFF116D51)),
-                    child: const Center(
+                    child: Center(
                       child: Icon(
                         Icons.shopping_basket,
                         color: Colors.white,
-                        size: 20.0,
+                        size: w * 0.050,
                       ),
                     ),
                   ),
                   Positioned(
-                    top: 25.0,
-                    right: 30.0,
+                    top: h * 0.006,
+                    right: w * 0.015,
                     child: Container(
-                      height: 20.0,
-                      width: 20.0,
+                      height: h * 0.03,
+                      width: w * 0.03,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
+                          borderRadius: BorderRadius.circular(w * 0.8),
                           color: Colors.red),
-                      child: const Center(
+                      child: Center(
                           child: Text(
                         '8',
                         style: TextStyle(
-                            fontFamily: 'Raleway', color: Colors.white),
+                            fontFamily: 'Raleway',
+                            color: Colors.white,
+                            fontSize: w * .03),
                       )),
                     ),
                   )
@@ -92,20 +99,21 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-        const Padding(
-          padding: EdgeInsets.all(15.0),
+        Padding(
+          padding: const EdgeInsets.all(15.0),
           child: Text(
             'Starbucks Coffee',
             style: TextStyle(
                 fontFamily: 'Raleway',
-                fontSize: 22.0,
+                fontSize: w * .025 + h * .025,
                 fontWeight: FontWeight.bold),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 15.0, top: 15.0, bottom: 15.0),
           child: SizedBox(
-            height: 100.0,
+            height: w * .205 + h * .090,
+            width: w * .205 + h * .090,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
@@ -119,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Padding(
           padding: const EdgeInsets.only(left: 15.0, top: 15.0, bottom: 10.0),
           child: SizedBox(
-            height: MediaQuery.of(context).size.height / 1.6,
+            height: h * 0.8,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
@@ -139,12 +147,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _buildCoffeeItem(
       String imgPath, String productName, String productType, String price) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
-          width: 225.0,
+          width: 260,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(w * 0.031),
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
@@ -158,24 +168,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    height: 250.0,
-                    width: 225.0,
+                    height: h * .3,
+                    width: w * 0.7,
                     decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(15.0),
-                            topRight: Radius.circular(15.0)),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(w * 0.03),
+                            topRight: Radius.circular(w * 0.03)),
                         image: DecorationImage(
                             image: AssetImage(imgPath), fit: BoxFit.cover)),
                   ),
-                  const SizedBox(height: 25.0),
+                  SizedBox(height: h * 0.07),
                   Padding(
                     padding: const EdgeInsets.only(left: 10.0),
                     child: Text(
                       productName,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontFamily: 'Raleway',
                           fontWeight: FontWeight.bold,
-                          fontSize: 17.0),
+                          fontSize: w * .018 + h * .018),
                     ),
                   ),
                   const SizedBox(height: 5.0),
@@ -183,9 +193,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.only(left: 10.0),
                     child: Text(
                       productType,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontFamily: 'Raleway',
-                          fontSize: 14.0,
+                          fontSize: w * .016 + h * .016,
                           color: Colors.grey),
                     ),
                   ),
@@ -204,21 +214,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: <Widget>[
                         Text(
                           '\$' + price,
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontFamily: 'Raleway',
                               fontWeight: FontWeight.bold,
-                              fontSize: 19.0),
+                              fontSize: w * .015 + h * .015),
                         ),
                         InkWell(
                           onTap: () {},
                           child: Container(
-                            height: 40.0,
-                            width: 40.0,
+                            height: w * .05,
+                            width: w * .05,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15.0),
                                 color: Colors.grey.withOpacity(0.2)),
-                            child: const Center(
-                              child: Icon(Icons.add, color: Colors.grey),
+                            child: Center(
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.grey,
+                                size: w * .023 + h * .023,
+                              ),
                             ),
                           ),
                         )
@@ -233,6 +247,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _buildItem(String productName, int count) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(
           right: 15.0, top: 10.0, bottom: 10.0, left: 4.0),
@@ -240,7 +256,7 @@ class _MyHomePageState extends State<MyHomePage> {
         duration: const Duration(milliseconds: 500),
         curve: Curves.easeIn,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(w * 0.03),
             color: switchHighlight(productName),
             boxShadow: [
               BoxShadow(
@@ -248,8 +264,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   spreadRadius: 2.0,
                   color: switchShadow(productName))
             ]),
-        height: 50.0,
-        width: 125.0,
+        height: h * .07,
+        width: w * .3,
         child: InkWell(
           onTap: () {
             selectedProduct(productName);
@@ -257,26 +273,26 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const SizedBox(height: 10.0),
+              SizedBox(height: h * .03),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0),
                 child: Text(
                   count.toString(),
                   style: TextStyle(
                       fontFamily: 'Raleway',
-                      fontSize: 17.0,
+                      fontSize: w * .020 + h * .020,
                       fontWeight: FontWeight.bold,
                       color: switchHighlightColor(productName)),
                 ),
               ),
-              const SizedBox(height: 7.0),
+              SizedBox(height: h * .03),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0),
                 child: Text(
                   productName,
                   style: TextStyle(
                       fontFamily: 'Raleway',
-                      fontSize: 15.0,
+                      fontSize: w * .016 + h * .016,
                       color: switchHighlightColor(productName)),
                 ),
               )

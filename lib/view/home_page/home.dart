@@ -34,6 +34,7 @@ import '../others/scroll.dart';
 import '../Cakes_pastries/cakes.dart';
 import '../restaurant_reviews/restaurant_reviews.dart';
 import '../others/starbucks.dart';
+import '../rental_service/rental_service.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -75,6 +76,8 @@ class MyApp extends StatelessWidget {
           '/cakes': (BuildContext context) => const Cakes(),
           '/reviews': (BuildContext context) => const Restaurant(),
           '/Starbucks': (BuildContext context) => const Starbucks(),
+          '/R': (BuildContext context) => const Rentalservice(),
+          '/rentalservice': (BuildContext context) => const Rentalservice(),
         },
         home: const MyHomePage(),
       ),
