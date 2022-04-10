@@ -35,7 +35,7 @@ class _FruitsPageState extends State<FruitsPage> {
       padding: const EdgeInsets.all(12.0),
       child: Container(
           height: h * 1 + w * 1,
-          width: h * 0.2 + w * 0.3,
+          width: h * 0.2 + w * 0.2,
           decoration: BoxDecoration(
               color: Color(int.parse(cardColor)),
               borderRadius: BorderRadius.circular(15.0)),
