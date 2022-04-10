@@ -35,6 +35,8 @@ import '../Cakes_pastries/cakes.dart';
 import '../restaurant_reviews/restaurant_reviews.dart';
 import '../others/starbucks.dart';
 import '../rental_service/rental_service.dart';
+import '../Food_Reviews/foodreviews.dart';
+import '../fruity/fruity.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -78,6 +80,8 @@ class MyApp extends StatelessWidget {
           '/Starbucks': (BuildContext context) => const Starbucks(),
           '/R': (BuildContext context) => const Rentalservice(),
           '/rentalservice': (BuildContext context) => const Rentalservice(),
+          '/foodreviews': (BuildContext context) => const Foodreviews(),
+          '/fruity': (BuildContext context) => const Fruity(),
         },
         home: const MyHomePage(),
       ),
@@ -122,20 +126,25 @@ class _MyHomePageState extends State<MyHomePage>
       appBar: AppBar(
         backgroundColor: Colors.purple[900],
         title: Center(
-          child: Text(
-            // ignore: unnecessary_brace_in_string_interps
-            '${h} ${controller.index + 1}',
-            style: TextStyle(
-              fontFamily: 'Fredoka',
-              fontSize: 26.sp,
-              color: Colors.white,
-              shadows: const [
-                Shadow(
-                  blurRadius: 7.0,
-                  color: Colors.black,
-                  offset: Offset(3.0, 3.0),
-                ),
-              ],
+          child: Padding(
+            padding: const EdgeInsets.all(
+              50,
+            ),
+            child: Text(
+              // ignore: unnecessary_brace_in_string_interps
+              '${h} ${controller.index + 1}',
+              style: TextStyle(
+                fontFamily: 'Fredoka',
+                fontSize: 26.sp,
+                color: Colors.white,
+                shadows: const [
+                  Shadow(
+                    blurRadius: 7.0,
+                    color: Colors.black,
+                    offset: Offset(3.0, 3.0),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

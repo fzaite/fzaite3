@@ -12,6 +12,7 @@ class _Home2State extends State<Home2> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
 
     return Row(
       children: [
@@ -20,7 +21,7 @@ class _Home2State extends State<Home2> {
             Navigator.of(context).pushNamed('/profile');
           },
           child: Container(
-            height: 60.0,
+            height: h * 0.04 + w * 0.06,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
@@ -38,7 +39,7 @@ class _Home2State extends State<Home2> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: w / 23,
+                  fontSize: h * 0.02 + w * 0.03,
                   fontFamily: 'Fredoka',
                 ),
               ),
@@ -50,7 +51,7 @@ class _Home2State extends State<Home2> {
             Navigator.of(context).pushNamed('/sgin');
           },
           child: Container(
-            height: 60.0,
+            height: h * 0.04 + w * 0.06,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
@@ -68,7 +69,7 @@ class _Home2State extends State<Home2> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: w / 23,
+                  fontSize: h * 0.017 + w * 0.022,
                   fontFamily: 'Fredoka',
                 ),
               ),

@@ -12,13 +12,14 @@ class _Home4State extends State<Home4> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Row(children: [
       GestureDetector(
         onTap: () {
           Navigator.of(context).pushNamed('/food');
         },
         child: Container(
-          height: 60.0,
+          height: h * 0.04 + w * 0.06,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -36,7 +37,7 @@ class _Home4State extends State<Home4> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w / 23,
+                fontSize: h * 0.02 + w * 0.03,
                 fontFamily: 'Fredoka',
               ),
             ),
@@ -48,7 +49,7 @@ class _Home4State extends State<Home4> {
           Navigator.of(context).pushNamed('/travel');
         },
         child: Container(
-          height: 60.0,
+          height: h * 0.04 + w * 0.06,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -66,7 +67,7 @@ class _Home4State extends State<Home4> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w / 23,
+                fontSize: h * 0.02 + w * 0.03,
                 fontFamily: 'Fredoka',
               ),
             ),

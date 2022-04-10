@@ -13,11 +13,12 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
-          height: 108.6,
+          height: h * 0.08 + w * 0.1,
           width: w,
           decoration: const BoxDecoration(
             image: DecorationImage(

@@ -17,25 +17,37 @@ class F1home extends StatefulWidget {
 class _F1homeState extends State<F1home> {
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: const <Widget>[
-          Header(),
-          Home2(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home3(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home4(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home5(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home6(),
-          SizedBox(height: 15),
+        children: <Widget>[
+          const Header(),
+          const Home2(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home3(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home4(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home5(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home6(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
         ],
       ),
     );

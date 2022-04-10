@@ -315,8 +315,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(
                     children: <Widget>[
                       Container(
-                        height: h * 0.07,
-                        width: w * 0.07,
+                        height: h * 0.06,
+                        width: w * 0.06,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(w * 0.5),
                           image: DecorationImage(
