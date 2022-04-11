@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import '../widget/header.dart';
-import '../widget/home12.dart';
-import '../widget/home13.dart';
 import '../widget/home14.dart';
 import '../widget/home15.dart';
 import '../widget/home16.dart';
@@ -18,27 +16,29 @@ class F3home extends StatefulWidget {
 class _F3homeState extends State<F3home> {
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: const <Widget>[
-          Header(),
-          Home12(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home13(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home14(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home15(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home16(),
-          SizedBox(height: 5.0),
-          Line(),
-          Home17(),
+        children: <Widget>[
+          const Header(),
+          const Home14(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home15(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home16(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home17(),
         ],
       ),
     );

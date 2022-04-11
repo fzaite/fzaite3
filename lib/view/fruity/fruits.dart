@@ -34,12 +34,14 @@ class _FruitsPageState extends State<FruitsPage> {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Container(
-          height: h * 1 + w * 1,
-          width: h * 0.2 + w * 0.2,
-          decoration: BoxDecoration(
-              color: Color(int.parse(cardColor)),
-              borderRadius: BorderRadius.circular(15.0)),
-          child: Column(children: [
+        height: h * 1 + w * 1,
+        width: h * 0.2 + w * 0.2,
+        decoration: BoxDecoration(
+          color: Color(int.parse(cardColor)),
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        child: Column(
+          children: [
             SizedBox(
               height: h * 0.02 + w * 0.02,
             ),
@@ -68,29 +70,34 @@ class _FruitsPageState extends State<FruitsPage> {
                   style: TextStyle(
                     fontFamily: 'Quicksand',
                     color: Colors.white,
-                    fontSize: h * 0.010 + w * 0.013,
+                    fontSize: h * 0.014 + w * 0.015,
                   )),
             ),
             SizedBox(
               height: h * 0.01 + w * 0.01,
             ),
             InkWell(
-                onTap: () {},
-                child: Container(
-                  height: h * 0.03 + w * 0.02,
-                  width: h * 0.1 + w * 0.2,
-                  decoration: BoxDecoration(
-                      color: const Color(0xFF89AC83),
-                      borderRadius: BorderRadius.circular(15.0)),
-                  child: const Center(
-                    child: Text(
-                      'Add to Cart',
-                      style: TextStyle(
-                          fontFamily: 'Quicksand', color: Colors.white),
-                    ),
+              onTap: () {},
+              child: Container(
+                height: h * 0.03 + w * 0.02,
+                width: h * 0.1 + w * 0.2,
+                decoration: BoxDecoration(
+                    color: const Color(0xFF89AC83),
+                    borderRadius: BorderRadius.circular(15.0)),
+                child: Center(
+                  child: Text(
+                    'Add to Cart',
+                    style: TextStyle(
+                        fontFamily: 'Quicksand',
+                        color: Colors.white,
+                        fontSize: h * 0.01 + w * 0.02),
                   ),
-                ))
-          ])),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

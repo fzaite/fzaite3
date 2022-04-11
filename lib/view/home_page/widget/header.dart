@@ -18,7 +18,7 @@ class _HeaderState extends State<Header> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
-          height: h * 0.08 + w * 0.1,
+          height: h * 0.07 + w * 0.1,
           width: w,
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -27,7 +27,7 @@ class _HeaderState extends State<Header> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 20.0, bottom: 23),
+          padding: const EdgeInsets.only(top: 10.0, bottom: 10),
           child: Text(
             you,
             style: TextStyle(

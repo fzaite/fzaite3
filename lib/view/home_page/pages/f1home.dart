@@ -5,6 +5,7 @@ import '../widget/home3.dart';
 import '../widget/home4.dart';
 import '../widget/home5.dart';
 import '../widget/home6.dart';
+import '../widget/home7.dart';
 import '../widget/line.dart';
 
 class F1home extends StatefulWidget {
@@ -45,6 +46,11 @@ class _F1homeState extends State<F1home> {
           ),
           const Line(),
           const Home6(),
+          SizedBox(
+            height: h * 0.005 + w * 0.005,
+          ),
+          const Line(),
+          const Home7(),
           SizedBox(
             height: h * 0.005 + w * 0.005,
           ),

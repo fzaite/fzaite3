@@ -19,7 +19,7 @@ class _Home13State extends State<Home13> {
           Navigator.of(context).pushNamed('/mobile');
         },
         child: Container(
-          height: h * 0.04 + w * 0.06,
+          height: h * 0.04 + w * 0.05,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -37,7 +37,7 @@ class _Home13State extends State<Home13> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: h * 0.0165 + w * 0.026,
+                fontSize: h * 0.015 + w * 0.015,
                 fontFamily: 'Fredoka',
               ),
             ),
@@ -49,7 +49,7 @@ class _Home13State extends State<Home13> {
           Navigator.of(context).pushNamed('/Plants');
         },
         child: Container(
-          height: h * 0.04 + w * 0.06,
+          height: h * 0.04 + w * 0.05,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -67,7 +67,7 @@ class _Home13State extends State<Home13> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: h * 0.02 + w * 0.03,
+                fontSize: h * 0.015 + w * 0.015,
                 fontFamily: 'Fredoka',
               ),
             ),

@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage>
               ),
               Container(
                 height: h * 0.02 + w * 0.04,
-                width: 200,
+                width: h * 0.2 + w * 0.2,
                 decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.4),
                   borderRadius: const BorderRadius.only(
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage>
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  right: h * 0.03 + w * 0.02,
+                  right: h * 0.01 + w * 0.014,
                 ),
                 child: IconButton(
                   icon: Icon(
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage>
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontWeight: FontWeight.bold,
-                fontSize: h * 0.01 + w * 0.03,
+                fontSize: h * 0.01 + w * 0.027,
               ),
             ),
           ),
@@ -163,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage>
             ),
           ),
           SizedBox(
-            height: h - 375.0,
+            height: h * 0.3 + w * 0.3,
             child: TabBarView(
               controller: tabController,
               children: const <Widget>[

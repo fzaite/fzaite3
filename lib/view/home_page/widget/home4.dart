@@ -19,7 +19,7 @@ class _Home4State extends State<Home4> {
           Navigator.of(context).pushNamed('/food');
         },
         child: Container(
-          height: h * 0.04 + w * 0.06,
+          height: h * 0.04 + w * 0.05,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -37,7 +37,7 @@ class _Home4State extends State<Home4> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: h * 0.02 + w * 0.03,
+                fontSize: h * 0.015 + w * 0.015,
                 fontFamily: 'Fredoka',
               ),
             ),
@@ -49,7 +49,7 @@ class _Home4State extends State<Home4> {
           Navigator.of(context).pushNamed('/travel');
         },
         child: Container(
-          height: h * 0.04 + w * 0.06,
+          height: h * 0.04 + w * 0.05,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -67,7 +67,7 @@ class _Home4State extends State<Home4> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: h * 0.02 + w * 0.03,
+                fontSize: h * 0.015 + w * 0.015,
                 fontFamily: 'Fredoka',
               ),
             ),

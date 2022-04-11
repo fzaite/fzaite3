@@ -13,18 +13,18 @@ class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 50.0,
+        height: MediaQuery.of(context).size.height * 0.05,
         width: MediaQuery.of(context).size.width,
         color: const Color(purple),
-        child: const Center(
+        child: Center(
           child: Text(
             f,
             style: TextStyle(
-              fontSize: 25,
+              fontSize: MediaQuery.of(context).size.width * 0.05,
               fontFamily: 'Fredoka',
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              shadows: [
+              shadows: const [
                 Shadow(
                   blurRadius: 7.0,
                   color: Colors.black,

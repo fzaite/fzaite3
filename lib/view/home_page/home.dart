@@ -37,6 +37,7 @@ import '../others/starbucks.dart';
 import '../rental_service/rental_service.dart';
 import '../Food_Reviews/foodreviews.dart';
 import '../fruity/fruity.dart';
+import '../nutrition/nutritionapp.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -82,6 +83,7 @@ class MyApp extends StatelessWidget {
           '/rentalservice': (BuildContext context) => const Rentalservice(),
           '/foodreviews': (BuildContext context) => const Foodreviews(),
           '/fruity': (BuildContext context) => const Fruity(),
+          '/Nutritionapp': (BuildContext context) => const Nutrition(),
         },
         home: const MyHomePage(),
       ),
@@ -135,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage>
               '${h} ${controller.index + 1}',
               style: TextStyle(
                 fontFamily: 'Fredoka',
-                fontSize: 26.sp,
+                fontSize: MediaQuery.of(context).size.width * 0.07,
                 color: Colors.white,
                 shadows: const [
                   Shadow(
