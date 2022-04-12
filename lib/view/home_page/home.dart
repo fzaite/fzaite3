@@ -5,6 +5,7 @@ import 'package:fzaite3/view/string.dart';
 import 'pages/f1home.dart' as f1home;
 import 'pages/f2home.dart' as f2home;
 import 'pages/f3home.dart' as f3home;
+import 'pages/radial_menu.dart' as menu;
 import 'widget/footer.dart';
 import '../restaurant/food.dart';
 import '../travel/travel.dart';
@@ -38,6 +39,8 @@ import '../rental_service/rental_service.dart';
 import '../Food_Reviews/foodreviews.dart';
 import '../fruity/fruity.dart';
 import '../nutrition/nutritionapp.dart';
+import '../Food_and_Beverages/food_and_beverages.dart';
+import '../green_revolution/green_revolution.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -84,6 +87,9 @@ class MyApp extends StatelessWidget {
           '/foodreviews': (BuildContext context) => const Foodreviews(),
           '/fruity': (BuildContext context) => const Fruity(),
           '/Nutritionapp': (BuildContext context) => const Nutrition(),
+          '/Foodandbeverages': (BuildContext context) =>
+              const Foodandbeverages(),
+          '/Greenrevolution': (BuildContext context) => const Greenrevolution(),
         },
         home: const MyHomePage(),
       ),
@@ -107,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage>
     // ignore: todo
     // TODO: implement initState
     super.initState();
-    controller = TabController(length: 3, vsync: this);
+    controller = TabController(length: 4, vsync: this);
     controller.addListener(() {
       setState(() {});
     });
@@ -171,6 +177,12 @@ class _MyHomePageState extends State<MyHomePage>
                   Icons.home_filled,
                   size: 30,
                 ),
+              ),
+              Tab(
+                icon: Icon(
+                  Icons.menu,
+                  size: 30,
+                ),
               )
             ]),
       ),
@@ -181,6 +193,7 @@ class _MyHomePageState extends State<MyHomePage>
           f1home.F1home(),
           f2home.F2home(),
           f3home.F3home(),
+          menu.Radialmenu()
         ],
       ),
     );
